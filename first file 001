@@ -12,3 +12,6 @@ a=80
 b=60
 diff=a-b
 print(diff)
+name=input("name :")
+age= input("age:")
+print("my name is", name, "and I am",age, "yera old")
