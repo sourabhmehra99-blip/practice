@@ -7,8 +7,11 @@ a=40
 b=60 
 sum =a+b
 print(sum)
-# difference 
+# difference
 a=80
 b=60
 diff=a-b
 print(diff)
+name=input("name :")
+age= input("age:")
+print("my name is", name, "and I am",age, "yera old")
