@@ -14,4 +14,13 @@ diff=a-b
 print(diff)
 name=input("name :")
 age= input("age:")
-print("my name is", name, "and I am",age, "yera old")
+ ("Traffic light ")
+light=input("colour of light:")
+if(light=="red"):
+   print("stop")
+elif(light=="yellow"):
+   print ("look")
+elif(light=="green"):
+   print("go")
+else:
+   print("light is broken")print("my name is", name, "and I am",age, "yera old")
