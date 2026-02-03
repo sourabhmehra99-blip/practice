@@ -25,3 +25,18 @@ elif(light=="green"):
 else:
    print("light is broken")
 
+# Small Resume 
+
+#input the details 
+ 
+name = input("what is your name ?") 
+age = input("What is your age ? ")
+number=input("what is your phone number ?")
+college = input ("from which collage or university you completed you degree")
+email = input (" your email id :")
+
+print("\n--- your small resume")
+print(name)
+print(age)
+print(number)
+print(email)
