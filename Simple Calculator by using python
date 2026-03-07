@@ -1,0 +1,30 @@
+# simple calcalator by using python
+
+num1 = int(input("Enter the first number : "))
+num2 = int(input("Enter the second number : "))
+
+def condition():
+    print (" Choose your operation ")
+    print ("1. Addition")
+    print ("2. Subtract")
+    print ("3. Multiply")
+    print ("4. Divide")
+    print ("5. Exit ")
+
+while True:
+    condition()
+    choice = input(" Enter your choice :")
+
+    if choice == "1":
+        print(f" Addition of Number 1 and Number 2 = {num1 + num2 }")
+
+    elif choice == "2":
+        print(f"Subtract of Number 1 and Number 2 = {num1 - num2}")
+    elif choice =="3":
+        print(f" Multiply of Number 1 and Number 2 = {num1*num2}")
+    elif choice == "4":
+        print (f" Divide of Number 1 and Number 2 = {num1/num2}")
+    else:
+        print ("Thanks")
+
+
