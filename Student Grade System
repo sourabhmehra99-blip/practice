@@ -1,0 +1,25 @@
+# Student Grade System 
+
+Name = input("Enter student name: ")
+Sub1 = float(input("Enter marks of subject 1: "))
+sub2 =float(input("Enter marks of subject 2: "))
+sub3 =float(input("Enter marks of subject 3: "))
+
+totalmarks = (Sub1 + sub2 + sub3 )
+marks = totalmarks/3
+
+# if elif else condition 
+
+if marks > 75:
+    Grade = "A"
+elif marks >=60:
+    Grade ="B"
+elif marks >=30:
+    Grade = "C"
+else:
+    print("fail ")
+print("---student Details---")
+print(f"student Name:{Name}")
+print(f"Total Marks:{totalmarks} ")
+print(f"Percentage: {marks}")
+print(f"Grade: {Grade}")
