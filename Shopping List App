@@ -47,3 +47,50 @@ while True:
     else:
         print("invalid choice. Please try again.Thank you !")
 
+
+
+
+# Shopping List Program 
+
+# Step 1:initate a empty list
+
+shopping_list = []
+
+# Step 2: Define the main menu 
+def show_menu():
+    print("\n---Shopping List---")
+    print("1. View the Shopping List")
+    print("2. Add item in the Shopping list")
+    print("3. Remvoe item from the Shopping list")
+    print("4. Clear the Shopping list")
+    print("5. Exit ")
+    
+# Step 3: Main program by match statement:
+while True:
+    show_menu()
+    choice = int(input("Enter your choice : "))
+    match choice:
+          case 1:
+              if len(shopping_list) == 0 :
+                   print ("no item in the shopping list ")
+              else :
+                   for index,item in enumerate (shopping_list):
+                        print(f"{index +1}.{item}")
+          case 2:
+              item = input("Enter your item : ")
+              shopping_list.append(item)
+              print(f"{item} has been added in the Shopping List")
+          case 3:
+              item = input("Enter item to remove : ")
+              if item in shopping_list:
+                  
+                 shopping_list.remove(item)
+                 print(f"{item} has been removed from the shopping list.")
+              else :
+                  print(f"{item} has not found in shopping list.")
+          case 4 :
+              shopping_list.clear()
+              print("Shopping List has been cleared .")
+          case 5:
+              print("Happy Shopping ! ")
+              break
