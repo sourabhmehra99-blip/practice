@@ -45,3 +45,51 @@ while True:
         break
     else:
         print("invaild choice. Please try again. Thanks you !")
+
+
+# to-Do List Program
+
+# Step :1 form a empty list
+main_list = []
+
+# Step :2 define the main menu
+def show_menu():
+    print("\n---TO-DO LIST---")
+    print("1. View the TO-DO LIST")
+    print("2. Addition to TO-DO LIST")
+    print("3. Remove to TO-DO LIST") 
+    print("4. Clear TO-DO LIST")
+    print("5. Exit ")
+
+# Step :3 Main program loop    
+# using match statement """"
+while True:
+    show_menu()
+    choice = int(input("Enter your choice (1-5):"))
+    match choice :
+        case 1 :
+            if len(main_list) == 0:
+                print("no tasks in the TO DO LIST")
+            else:
+                for index,item in enumerate(main_list):
+                    print(f"{index + 1 }.{item}")
+        case 2:
+            item = input("Enter your tasks :")
+            main_list.append(item)
+            print(f"{item} has been added in the TO DO LIST. ")
+
+        case 3:
+            item = input("Enter your tasks to remove :")
+            if item in main_list:
+                main_list.remove(item)
+                print(f"{item} has been remove from the TO DO LIST.")
+            else: 
+                print(f"{item} is not in the TO DO list ")
+        
+        case 4 :
+            main_list.clear()
+            print("TO DO List has been cleared.")
+        case _:
+            print ("good luck for your tasks.")
+            break
+
