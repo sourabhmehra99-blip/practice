@@ -40,3 +40,66 @@ print(name)
 print(age)
 print(number)
 print(email)
+shopping_list =["race","game","play","gift"]
+
+# Accessing Elements
+# print(shopping_list[0])
+# print(shopping_list[1])
+# print(shopping_list[2])
+# print(shopping_list[3])
+# print(shopping_list[-1])
+
+# Adding elements
+'''shopping_list.append("hard")
+shopping_list.append("bed")
+print(shopping_list)'''
+
+#insert - add at specific position [insert(2=position, element to place)]
+"""shopping_list.insert(2,"good")
+print(shopping_list)"""
+
+# extend - add multiple elements [Answer = ['race', 'game', 'play', 'gift', 3, 2, 4]]
+"""shopping_list.extend([3,2,4])
+print(shopping_list)"""
+
+# Remove elements
+"""shopping_list.remove("game")
+print(shopping_list)"""
+
+#pop remove by index
+"""shopping_list.pop(2)
+print(shopping_list)"""
+ 
+#clear - remove all
+"""shopping_list.clear()
+print(shopping_list)"""
+
+#update Elements
+"""shopping_list[0] = "horse"
+print(shopping_list)"""
+
+# list slicing
+"""print(shopping_list[1:3])"""
+
+# for loop in list  Answer race
+#game
+#play
+#gift
+"""for item in shopping_list:
+    print(item)"""
+
+# useful function 
+"""print(len(shopping_list)) # answer 4 number of element
+print(max(shopping_list)) #max value for number 
+print(min(shopping_list))""" # min valre for number
+# print(sum(shopping_list)) sum of elements
+
+#sorting list 
+"""shopping_list.sort()
+print(shopping_list)
+shopping_list.sort(reverse=True)
+print(shopping_list)"""
+
+#copying
+"""my_list= shopping_list.copy()
+print(my_list)"""
