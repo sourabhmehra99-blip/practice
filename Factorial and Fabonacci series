@@ -1,0 +1,27 @@
+"""
+    Calculates the n-th Fibonacci number using recursion.
+    Base cases:
+    - F(0) = 0
+    - F(1) = 1
+    For n > 1:
+    - F(n) = F(n-1) + F(n-2)
+    """
+
+def fac(n):
+    
+    if n == 0 or n==1:
+        return n
+    else:
+        return  fac(n-1) + fac(n-2)
+    
+user_input = int(input("Enter your value: "))    
+print(fac(user_input))
+
+def factroial(n):
+    if n == 0 or n==1:
+        return 1
+    else:
+        return n * factroial(n-1)
+
+Enter_value = int(input("Enter your value: "))
+print(factroial(Enter_value))
