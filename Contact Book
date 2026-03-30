@@ -1,0 +1,96 @@
+# Contact Book 
+#Step 1:Initialize an empty Contact BO
+Contact_book ={}
+
+
+def Main_menu():
+    print("\n----CONTACT BOOK----") 
+    print("1.Add Contact")
+    print("2.View Contact")
+    print("3.Search Contact")
+    print("4.Edit Contact")
+    print("5.Delete Contact")
+    print("6. Exit")
+
+def add_con():
+    name = input("Enter contact name: ")
+    if name in Contact_book:
+        print(f"{name} has already in the contact book. ")
+    else:
+        phone = input("Enter phone number: ")
+        email = input("Enter contact email: ")
+        Contact_book[name] = {"phone":phone,"email":email}
+        print(f"{name} has been added in the contact book successfully.")
+         
+def view_con():
+    if Contact_book:
+        print("\n----Contact Book----")
+        for name , details in Contact_book.items():
+            print(f"Name: {name}")
+            print(f"Phone: {details['phone']}")
+            print(f"Email: {details['email']}")
+    else:
+            print("your contact book is empty. ")
+
+def search_con():
+    name = input("Enter name of the contact you want to search: ")
+    if name in Contact_book:
+        print(f"\n----Contact details {name}---")
+        print(f"Name: {name}")
+        print(f"Phone: {Contact_book[name]['phone']}")
+        print(f"Email: {Contact_book[name]['email']}")
+    else :
+        print(f"contact {name} has not found in the contact book. ")
+
+def edit_con():
+    name = input("Enter the name of the contact you wnat to edit: ")
+    if name in Contact_book:
+        print(f"\n----Editing Contact: {name}----")
+        print("1. Edit phone ")
+        print("2. Edit email ")
+        choice = input("Enter your choice(1-2): ")
+        if choice == "1":
+            phone = input("Enter new phone number: ")
+            Contact_book[name]["phone"] =  phone
+            print(f"Contact {name} details has been updated succesfully.")
+        elif choice == "2":
+            email = input("Enter new email: ") 
+            Contact_book[name]["email"] = email
+            print(f"Contact {name} details has been updated succesfully.")
+        else:
+            print("Invalid choice. ")
+    else:
+        print(f"Contact {name } has not found in the contact book. ") 
+
+def delete_con():
+    name = input("Enter the name of the contact you want to delete: ")
+    if name in Contact_book:
+        del Contact_book[name]
+        print(f"contact {name} has been deleted successfully.")
+    else:
+        print(f"Contact {name} has not found in the contact book. ")
+
+while True:
+    Main_menu()
+    choice = int(input("Enter your choice(1-6): ") )
+    match choice :
+        case 1:
+            add_con()
+        case 2:
+            view_con()
+        case 3:
+            search_con()
+        case 4: 
+            edit_con()
+        case 5:
+            delete_con()
+        case 6:
+            print("Exit")
+            break
+        case _:
+            print("Invalied startment")
+
+        
+
+
+
