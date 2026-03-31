@@ -26,6 +26,10 @@ def factroial(n):
         return 1
     else:
         return n * factroial(n-1)
+try:
 
-Enter_value = int(input("Enter your value: "))
+ Enter_value = int(input("Enter your value: "))
+except ValueError:
+   print("invalid Statement! ")
+   
 print(factroial(Enter_value))
