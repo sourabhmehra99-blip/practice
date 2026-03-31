@@ -8,14 +8,18 @@
     """
 
 def fac(n):
-    
-    if n == 0 or n==1:
+    if n == 1 or n == 0:
         return n
     else:
-        return  fac(n-1) + fac(n-2)
-    
-user_input = int(input("Enter your value: "))    
+        return fac(n-1) + fac(n-2)
+
+
+try:
+    user_input =int(input("Enter number: "))
+except ValueError:
+    print("invalid Statement! ")
 print(fac(user_input))
+
 
 def factroial(n):
     if n == 0 or n==1:
