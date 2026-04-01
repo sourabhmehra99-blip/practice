@@ -1,21 +1,28 @@
 # Number Guessing Game 
+i#
 import random
-
 secret_number = random.randint(1,10)
-attempts = 3 
 
-print ("Think a number between 1 to 10 ")
+attempts = 3
 
-while attempts > 0:
-    guess = int (input("Guess a number :" ))
+print("Think a number between 1 to 10. ")
+
+while attempts > 0 :
+    try:
+     guess = int(input("Enter Guess number: "))
+    except ValueError:
+        print("Invalid statement.\nTry again ")
+        continue
     if guess == secret_number:
-        print("congratulations !you guess the number ")
+        print(f"guess {guess} number is right. ")
         break
-    elif guess < secret_number :
-        print ("too low ! try again")
-    else :
-        print ("too high ! try again ")
-    attempts -= 1 
-if attempts == 0  :
-    print("sorry,you've run out of attempts .")
-    print("the secret number :",secret_number)
+
+    elif guess > secret_number:
+        print("too high!!\nTry again ")
+    else:
+        print("too low!! \nTRY again")
+    attempts -=1 
+if attempts == 0:
+        print("sorry, you've run out of attemts. ")
+        print(f"the secret number is {secret_number}")
+
