@@ -65,3 +65,7 @@ while True:
         break
     case _:
           print("Invalid statement. Choose again !")
+
+# to delete a file by os function
+import os
+os.remove("tasks.txt")
