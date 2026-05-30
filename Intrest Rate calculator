@@ -1,0 +1,30 @@
+principle = float(input("Enter principal amount:"))
+
+while principle <= 0 :
+    if principle <= 0 :
+        
+      print("Principal can't be zero or negative.")
+    principle = float(input("Enter principal amount:"))
+else:
+   print(f"the principal amount:{principle:.2f}")
+
+intrestRate = float(input("Enter intrest rate : "))
+
+while intrestRate < 0 :
+   if intrestRate < 0:
+      print("Intrest Rate can't be negative :")
+   intrestRate = float(input("Enter interest Rate : "))
+else:
+   print(f"Intrest Rate is {intrestRate:.2f}")
+
+time = float(input("Enter time in years: "))
+while time <= 0: 
+   if time <= 0:
+      print("Time can't be zero or negative")
+      time = float(input("Enter time in years: "))
+else:
+      print(f"time is {time:.1f}")
+
+total = principle * (1 + intrestRate/100) ** time
+
+print(f"total amount after 2 years is {total:2f}")
